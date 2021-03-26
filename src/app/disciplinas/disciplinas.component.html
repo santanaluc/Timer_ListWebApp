@@ -1,0 +1,13 @@
+<h2>Disciplinas</h2>
+<div>
+  <input #input type="text" />
+  <button (click)="this.disciplinas.add(input.value); input.value='';">Add</button>
+</div>
+<ul>
+  <li *ngFor="let disciplina of this.disciplinas.getList(), index as i">
+    {{disciplina}}
+    <span (click)="this.disciplinas.remove(i)" style="cursor: pointer;">
+      -
+    </span>
+  </li>
+</ul>

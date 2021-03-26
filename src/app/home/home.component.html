@@ -1,0 +1,13 @@
+<h3>Contador</h3>
+<div>
+  Digite um número final para o timer: <br />
+  <input type="number" [(ngModel)]="final" />
+</div>
+
+<div>
+  {{timer.getCount()}}s
+</div>
+
+<button (click)="timer.start(1000, final)">Iniciar</button>
+<button (click)="timer.stop()">Parar</button>
+<button (click)="timer.clear()">Zerar</button>
